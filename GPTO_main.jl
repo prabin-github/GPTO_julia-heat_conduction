@@ -59,7 +59,7 @@
 ## source folders containing scripts not in this folder
 
 using Dates
-using Printf
+using Printf, DelimitedFiles
 using LinearAlgebra, SparseArrays, StaticArrays
 using Makie, GLMakie
 using Gridap, Gridap.Geometry, Gridap.Fields, GridapGmsh, Gridap.CellData, Gridap.FESpaces
@@ -97,3 +97,4 @@ OPT[:history] = runmma(FE,OPT,GEOM,copy(OPT[:dv]),obj,nonlcon)
 if OPT[:options][:plot] == true
     plot_history()
 end
+
