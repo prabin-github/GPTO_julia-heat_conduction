@@ -11,26 +11,11 @@ end
 
 
 function plot_density(iter)
-    # Range of limit of colors
-    range_limits = (0, 1)
-    # Coordinates on FEM mesh
-    xs = FE[:coords][1, :]
-    ys = FE[:coords][2, :]
-    # Polygon for FE MESH
-    shape_polygon = [Point2f[(xs[FE[:elem_node][:, ele][1]], ys[FE[:elem_node][:, ele][1]]), (xs[FE[:elem_node][:, ele][2]], ys[FE[:elem_node][:, ele][2]]),
-        (xs[FE[:elem_node][:, ele][3]], ys[FE[:elem_node][:, ele][3]]), (xs[FE[:elem_node][:, ele][4]], ys[FE[:elem_node][:, ele][4]])
-    ] for ele in 1:size(FE[:elem_node], 2)]
-
     fig = Figure()
     ax = Axis(fig[1, 1],
-                title = "density, $(OPT[:functions][:objective]) = $(@sprintf("%.3f", OPT[:functions][:f][1][:value]))", 
-                xlabel="X", ylabel="Y", aspect=DataAspect())
-    Makie.poly!(ax, shape_polygon, color=OPT[:penalized_elem_dens], colormap=:jet)
-    # Makie.Colorbar(fig[1, 2], colormap=:jet, colorrange=range_limits)
-    # Label(fig[1, 2, Top()], L"$\rho$", padding=(0, 0, 2, 0))
-    xlims!(ax, FE[:coord_min][1], FE[:coord_max][1])
-    ylims!(ax, FE[:coord_min][2], FE[:coord_max][2])
-    # colsize!(fig.layout, 1, Aspect(1, maximum(xs) / maximum(ys)))
+            title = "density, $(OPT[:functions][:objective]) = $(@sprintf("%.3f", OPT[:functions][:f][1][:value]))", 
+            xlabel="X", ylabel="Y", aspect=DataAspect())
+    image!(ax, reshape(OPT[:penalized_elem_dens], Tuple(FE[:mesh_input][:elements_per_side])), colormap=:jet)
     Makie.resize_to_layout!(fig)
     display(fig)
 
@@ -399,4 +384,5 @@ function writevtk(folder, name_prefix, iteration)
             println(fid, density, " ")
         end
     end
+
 end
