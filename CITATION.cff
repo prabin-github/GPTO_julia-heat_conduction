@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: "GPTO Julia-Heat Conduction"
+version: "0.1.0"
+doi:
+date-released: "2026-02-01"
+authors:
+  - given-names: "Prabin"
+    family-names: "Pradhananga"
+    affiliation: "School of Mechanical, Aerospace, and Manufacturing Engineering, University of Connecticut"
+message: "If you use this software in your research, please cite it."
+url: "https://github.com/prabin-github/GPTO_julia-heat_conduction"
+license: "Creative Commons CC BY-NC 4.0"
