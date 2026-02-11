@@ -1,12 +1,63 @@
 cff-version: 1.2.0
-title: "GPTO Julia-Heat Conduction"
-version: "0.1.0"
-doi:
-date-released: "2026-02-01"
+title: GPTO Julia-Heat Conduction
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 authors:
-  - given-names: "Prabin"
-    family-names: "Pradhananga"
-    affiliation: "School of Mechanical, Aerospace, and Manufacturing Engineering, University of Connecticut"
-message: "If you use this software in your research, please cite it."
-url: "https://github.com/prabin-github/GPTO_julia-heat_conduction"
-license: "Creative Commons CC BY-NC 4.0"
+  - given-names: Prabin
+    family-names: Pradhananga
+    email: 2prabinp2@gmail.com
+    affiliation: University of Connecticut
+    orcid: 'https://orcid.org/0000-0001-7056-1733'
+repository-code: >-
+  https://github.com/prabin-github/GPTO_julia-heat_conduction
+abstract: >-
+  GPTO Julia-Heat Conduction
+
+  GPTO Julia with Gridap
+
+
+  A Julia/Gridap adaptation of the MATLAB code for topology
+  optimization with bars using the geometry projection
+  method, modified for solving heat conduction (or heat
+  diffusion) problem.
+
+
+  Version 0.1.0 -- August 2025
+
+
+  This code is a migration to Julia/Gridap by
+
+
+  Prabin Pradhananga
+
+  School of Mechanical, Aerospace, and Manufacturing
+  Engineering
+
+  University of Connecticut
+
+
+  of PyGPTO (Python/Numpy adaptation of the MATLAB code) for
+  topology optimization with bars using the geometry
+  projection method, translated to Python by
+
+
+  Andres Ortegon
+
+  Department of Mathematics
+
+  Universidad Nacional de Colombia
+
+
+  from the GPTO Matlab code written by
+
+
+  Hollis Smith and Julian Norato
+
+  Department of Mechanical Engineering
+
+  University of Connecticut
+license: CC-BY-NC-4.0
+version: 0.1.0
+date-released: '2026-02-01'
