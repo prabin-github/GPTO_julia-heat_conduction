@@ -27,6 +27,9 @@
 # Department of Mechanical Engineering
 # University of Connecticut
 #
+# Special thanks to Sy Nguyen-Van for his Julia code that helped a lot during
+# this translation.
+#
 #
 # Disclaimer
 # ==========
@@ -97,4 +100,5 @@ OPT[:history] = runmma(FE,OPT,GEOM,copy(OPT[:dv]),obj,nonlcon)
 if OPT[:options][:plot] == true
     plot_history()
 end
+
 
