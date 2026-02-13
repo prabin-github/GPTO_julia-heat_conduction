@@ -26,3 +26,6 @@ from the GPTO Matlab code written by
 <strong>Hollis Smith and Julian Norato</strong> <br/>
 Department of Mechanical Engineering <br/>
 University of Connecticut <br/>
+
+Special thanks to Sy Nguyen-Van for his Julia code that helped a lot during
+this translation.
